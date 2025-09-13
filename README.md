@@ -15,3 +15,4 @@
     vim-surround || nvim-surround for quotes, brackets and tags
     LSP, especially for source code navigation
     code completion - I don't have experience with these, but I would like to experiment with one. 
+    Some Git tools, especially for diffs and merge conflicts.
