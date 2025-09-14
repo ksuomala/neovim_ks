@@ -4,8 +4,8 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 
 -- Global indentation defaults
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
 vim.o.expandtab = true
 
 -- Ruby indentation: 2 spaces
@@ -22,8 +22,8 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "lua",
     callback = function()
-        vim.bo.shiftwidth = 4
-        vim.bo.tabstop = 4
-        vim.bo.softtabstop = 4
+        vim.bo.shiftwidth = 2
+        vim.bo.tabstop = 2
+        vim.bo.softtabstop = 2
     end,
 })
