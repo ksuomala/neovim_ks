@@ -15,6 +15,11 @@ return {
             },
         },
         config = function()
+            local lspconfig = require("lspconfig")
+
+            lspconfig.ruby_lsp.setup({
+                capabilities = capabilities
+            })
             require('lspconfig').lua_ls.setup{}
         end,
     }
