@@ -10,6 +10,7 @@
     treesitter - treesitter for better syntax highlighting and code navigation
     telescope - all I need for file navigation
     oil - File system manipulation
+    which-key - cheatsheet for keybindings
 
 # TODO
     vim-surround || nvim-surround for quotes, brackets and tags
