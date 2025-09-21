@@ -1,24 +1,44 @@
 return {
-    {
-        "neovim/nvim-lspconfig",
-        dependencies = {
-            {
-                "folke/lazydev.nvim",
-                ft = "lua", -- only load on lua files
-                opts = {
-                    library = {
-                        -- See the configuration section for more details
-                        -- Load luvit types when the `vim.uv` word is found
-                        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-                    },
-                },
-            },
-        },
-        config = function()
-            local lspconfig = require("lspconfig")
+  {
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+    end
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      local lspconfig = require('lspconfig')
 
-            lspconfig.ruby_lsp.setup{}
-            require('lspconfig').lua_ls.setup{}
-        end,
-    }
+      lspconfig.lua_ls.setup ({})
+      lspconfig.ruby_lsp.setup ({})
+    end
+  },
+  config = function()
+    require("mason-lspconfig").setup({
+      ensure_installed = { "ruby_lsp", "sorbet", "lua_ls" },
+      automatic_enable = true,
+    })
+
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
+    require("lspconfig").ruby_lsp.setup({ capabilities = capabilities })
+
+    require("lspconfig").sorbet.setup({
+      capabilities = capabilities,
+      root_dir = require("lspconfig.util").root_pattern("sorbet/config"),
+    })
+
+    require("lspconfig").lua_ls.setup({
+      capabilities = capabilities,
+      settings = {
+        Lua = {
+          workspace = { checkThirdParty = false },
+          telemetry = { enable = false },
+          diagnostics = { globals = { "vim" } },
+        },
+      },
+    })
+    end,
 }

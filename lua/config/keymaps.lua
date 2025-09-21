@@ -1,8 +1,13 @@
 --make space the leader key
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+-- Move line up/down in normal mode
+vim.keymap.set("n", "√", ":m .+1<CR>==", { desc = "Move line down" })
+vim.keymap.set("n", "ª", ":m .-2<CR>==", { desc = "Move line up" })
 
-
+-- Move selected lines up/down in visual mode
+vim.keymap.set("v", "√", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+vim.keymap.set("v", "ª", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<space>fd", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
 vim.keymap.set("n", "<space>fg", "<cmd>Telescope live_grep<CR>", { desc = "Live grep" })
