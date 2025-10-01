@@ -5,7 +5,7 @@ return {
         config = function()
             require("gruvbox").setup({})
             vim.cmd([[colorscheme gruvbox]])
-            vim.o.background = "dark" 
+            -- vim.o.background = "dark" 
         end
     }
 }
