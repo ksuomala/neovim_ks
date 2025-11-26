@@ -4,8 +4,8 @@ return {
         name = "nightfox",
         priority = 1000,
         config = function()
---            require("nightfox").setup({})
---            vim.cmd("colorscheme nightfox")
+           -- require("nightfox").setup({})
+           -- vim.cmd("colorscheme terafox")
         end
     }
 }
