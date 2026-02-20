@@ -14,6 +14,14 @@ vim.keymap.set("n", "<space>fd", "<cmd>Telescope find_files<CR>", { desc = "Find
 vim.keymap.set("n", "<space>fg", "<cmd>Telescope live_grep<CR>", { desc = "Live grep" })
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 
+-- Yank to system clipboard
+vim.keymap.set("n", "%", '"+yy', { desc = "Yank line to system clipboard" })
+vim.keymap.set("v", "%", '"+y',  { desc = "Yank selection to system clipboard" })
+
+-- Paste from system clipboard
+vim.keymap.set("n", "\\", '"+p', { desc = "Paste from system clipboard" })
+vim.keymap.set("v", "\\", '"+p', { desc = "Paste from system clipboard" })
+
 vim.keymap.set('n', '<leader>gd', vim.lsp.buf.references, { desc = 'Go to references' })
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
