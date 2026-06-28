@@ -4,7 +4,7 @@
 # Dependencies
     brew install ripgrew - for file navigation
     brew install lua-language-server
-    brew install ruby-lsp
+    gem install ruby-lsp   # Ruby LSP — install globally, NOT via bundle exec
 # Installed Plugins
     Lazy - Plugin management
     gruvbox - A theme with a classic design that is easy on the eyes and a pleasure to read
@@ -12,7 +12,7 @@
     telescope - all I need for file navigation
     oil - File system manipulation
     which-key - cheatsheet for keybindings
-    lsp - lsp.lua is using mason, lspconfig and ruby-lsp to help with referencing and other lsp functionalities
+    lsp - uses Neovim's native LSP (vim.lsp.enable) with ruby-lsp configured in lsp/ruby-lsp.lua
 # TODO
     vim-surround || nvim-surround for quotes, brackets and tags
     LSP, especially for source code navigation
