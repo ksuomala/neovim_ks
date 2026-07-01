@@ -1,17 +1,14 @@
 return {
     {
-        "ellisonleao/gruvbox.nvim",
+        "sainnhe/gruvbox-material",
         priority = 1000,
         config = function()
-            require("gruvbox").setup({
-              palette_overrides = {
-                bright_green = "#268626",
-                bright_aqua = "#2b8c9f"
-              }
-            })
-            vim.cmd([[colorscheme gruvbox]])
+            vim.g.gruvbox_material_background = "hard"
+            vim.g.gruvbox_material_foreground = "original"
+            vim.g.gruvbox_material_better_performance = 1
+            vim.g.gruvbox_material_enable_italic = 1
             vim.o.background = "dark"
+            vim.cmd.colorscheme("gruvbox-material")
         end
-
     }
 }
