@@ -1,7 +1,9 @@
 {
   "catppuccin": { "branch": "main", "commit": "e068ab5f8261f23f6f71ffd8791ae40315b77b9c" },
   "codereview.nvim": { "branch": "main", "commit": "118333a01fe6e5004d76b715e448602a80431314" },
+  "earthsong": { "branch": "main", "commit": "d02bc3ad8f01766f0f816340c59991839fb54641" },
   "edge": { "branch": "master", "commit": "7ec78c21bd8f0b2b0b47043bb1e730c561647c72" },
+  "github-theme": { "branch": "main", "commit": "c106c9472154d6b2c74b74565616b877ae8ed31d" },
   "gruvbox-material": { "branch": "master", "commit": "11d779b26a9ab2b3db8c22c6ac9fb6e8ed4fea79" },
   "kanagawa.nvim": { "branch": "master", "commit": "bb85e4bfc8d89b0e62c8fa53ccdd13d12e2f77b3" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
